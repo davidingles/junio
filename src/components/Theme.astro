@@ -4,8 +4,15 @@
 
 <script>
 	const changeTheme = () => {
+		const HTMLElement = document.querySelector('html')
+		if (HTMLElement.style.colorScheme === 'dark') {
+			HTMLElement.style.colorScheme = 'light'
+		} else {
+			HTMLElement.style.colorScheme = 'dark'
+		}
 		console.log('david')
 	}
+
 	document.addEventListener('DOMContentLoaded', () => {
 		document.querySelector('.btn').addEventListener('click', changeTheme)
 	})
