@@ -1,5 +1,5 @@
 ---
-import Theme from '../components/Theme.astro'
+import BotonTheme from '../components/BotonTheme.astro'
 interface Props {
 	title: string
 }
@@ -31,15 +31,19 @@ const { title } = Astro.props
 		<title>{title}</title>
 	</head>
 	<body>
-		<Theme />
+		<BotonTheme />
 		<slot />
 	</body>
 </html>
 <style is:global>
 	:root {
+		--colorAux1: rgb(222, 171, 18);
+		--colorAux2: rgb(0, 128, 72);
+		--colorLight: rgb(214, 214, 214);
+		--colorDark: rgb(44, 44, 44);
 		color-scheme: light dark;
-		color: light-dark(black, #999);
-		background-color: light-dark(#999, #333);
+		color: light-dark(var(--colorDark), var(--colorLight));
+		background-color: light-dark(var(--colorLight), var(--colorDark));
 	}
 	html {
 		font-family: system-ui, sans-serif;

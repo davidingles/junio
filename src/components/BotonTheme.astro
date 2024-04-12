@@ -1,0 +1,28 @@
+---
+
+---
+
+<script>
+	import { changeTheme } from '../logica/theme.js'
+	document.addEventListener('DOMContentLoaded', () => {
+		document.getElementById('theme').addEventListener('click', changeTheme)
+	})
+</script>
+<button
+	class='btn'
+	id='theme'
+	autofocus
+>
+	Theme
+</button>
+
+<style>
+	.btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0.5rem;
+		cursor: pointer;
+		background-color: light-dark(var(--colorAux1), var(--colorAux2));
+	}
+</style>
